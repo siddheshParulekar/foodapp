@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+ 
+    <div class="hero">
+        <div class="form">
+            <div class="button-box">
+                <div id="btn"></div>
+                 <button type="button" class="toggle-btn" onclick="LogIn()">log In</button>
+                 <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+                
+            </div>
+            
+            <form  id="login" class="input-group" action="UserServlet" method="post">
+                <input type="text" name="username" id="uname" minlength="3" maxlength="10" onblur="validateLogin()"  class="input-field" placeholder="user id " required>
+                <input type="text" name="passWord" class="input-field" placeholder="password "  id="pass"   required>
+                <a href="ChangePassword.html"  class="update">Forget Password</a></br>
+                 <button  type="submit" class="submit-btn" onclick="validateHome()"  > Login</button>  
+                  <input type="hidden" name="act" class="Lbutton" value="loginAction">    </form>
+                 
+                 
+                 
+            <form id="regeister" class="input-group" action="UserServlet" method="post">
+                <input type="text" name="uname" id="uname2" minlength="3" maxlength="10"  onblur="validateRegister2()" class="input-field" placeholder="user id " required>
+                 <input type="text" name="name" class="input-field" placeholder=" Enter name "  id="name"   required>
+                <input type="email" name="mail" class="input-field" placeholder="Email id "  id="mail"   onblur="validateRegister1()" required>
+                <input type="text" name="pass" class="input-field" placeholder=" Enter password "  id="pass2"   required>
+               <input type="text" id="phone" name="contact"  placeholder="Contact Number ">   
+                <button type="submit" class="submit-btn" onclick="validate()"  > Register</button>
+                <input type="hidden" name="act" value="registerAction"> 
+            </form>
+        </div>
+        
+    </div>
+   
+    
+    <!-- <nav id="topnav">
+        <ul >
+            <li><a href="index.html">Home</a></li>
+            <li> <a href="aboutUs.html">About Us</a> </li>
+            <li><a href="Concept.html">Concept</a></li>
+            <li> <a href="Regeister.html"> Login page</a></li>
+        </ul>
+    </nav> -->
+
+    <script>
+        var lg = document.getElementById("login");
+        var rg = document.getElementById("regeister");    
+         var bt = document.getElementById("btn");
+         var emailNode =document.getElementById("mail");
+         var unameNode = document.getElementById("uname");
+         var unameNode1 = document.getElementById("uname2");
+ 
+        function Register(){
+
+            lg.style.left="-400px";
+            rg.style.left="50px";
+            bt.style.left="110px";
+        }
+        function LogIn(){
+
+            lg.style.left="50px";
+            rg.style.left="450px";
+            bt.style.left="0";
+        }
+        
+        
+        function validateRegister1(){
+        	let email=emailNode.value;
+            
+            if(email===''){
+                
+                 emailNode.style.border="2px solid red";
+                 return false;
+               }
+           else if(!email.includes('@') || email.endsWith('@')){
+                
+                emailNode.style.border="2px solid red";
+                return false;
+           }
+           else{
+              emailNode.style.border="2px solid green";
+              return true;
+         
+           }
+        	
+        }
+        function validateRegister2(){
+        	let uName=unameNode1.value;
+        	if(uName===''){
+                
+                unameNode.style.border="2px solid red";
+                return false;
+              }
+              else if(uname.length<3 || uname.length>10){
+                
+               unameNode.style.border="2px solid red";
+               return false;
+              } 
+             else{
+               unameNode.style.border="2px solid green";
+               return true;
+              }
+        }
+
+       function validateLogin(){
+          let uName=unameNode.value;
+           
+           if(uName===''){
+               
+              unameNode.style.border="2px solid red";
+              return false;
+            }
+            else if(uname.length<3 || uname.length>10){
+              
+             unameNode.style.border="2px solid red";
+             return false;
+            } 
+           else{
+             unameNode.style.border="2px solid green";
+            // window.location = "index.html";
+             return true;
+            }
+    	   
+       }
+       
+       function validate(){
+           let v1 = validateRegister1();
+           let v2 = validateRegister2();
+           //return (v1 && v2);
+           if(v1 && v2){
+        	   lg.style.left="50px";
+               rg.style.left="450px";
+               bt.style.left="0";
+           }
+           else{
+        	   //alert ("failed");
+           }
+        } 
+       
+       
+        
+        function validateHome(){
+
+        	
+         validateLogin();
+        	if(validateLogin() == true){
+        		//window.location = "index.html";
+        		//alert("Success");
+        	}
+        	else{
+        		//alert("failed");
+        	}
+          
+        }       
+    </script>
+</body>
+</html>

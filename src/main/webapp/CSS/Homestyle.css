@@ -1,0 +1,99 @@
+@charset "ISO-8859-1";
+body {background-color: white}
+nav{
+    background-color: #44818d  ;
+    
+  }
+#topnav{
+    position: fixed; /* sticky : scrolles till it reaches to given position and then bcm fixed*/
+     top: 0px;
+     width: 100%; 
+     margin: auto;
+  }
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+     text-align: center;
+     
+    
+ }
+nav li{
+     margin: 10px;
+     display:inline-block;
+
+    
+ }
+nav ul li a{
+     text-decoration: none;
+     color: white;
+     width: 100px;
+     display: block;
+     padding: 25px 20px;
+     font-size: 15px;
+     text-transform: uppercase;
+     font-weight: bold;
+
+ }
+
+nav a:hover{
+    background: greenyellow;
+
+ }
+#slides{
+   /* border: 1px solid red; */
+    height: 300px;
+    width: 100%;
+    margin-top: 70px;
+ }
+ 
+ .Option{
+    text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+   
+ }
+ #bt1,#bt2{
+    height: 25px;
+    width: 90px;
+    background-color: whitesmoke;
+ }
+ 
+
+#ele-one{
+  width: 100%;
+  height: 170px;
+}
+#tiffin1{
+ /* height: 110px;*/
+  margin: 0;
+  padding: 0;
+}
+#tfn1{
+  height: 170px;
+  float: left;
+}
+.sections{
+  box-shadow: 5px 10px #707070;
+  background-color: #eae7dc ;
+  border-top: 1px solid black;
+}
+.Names{
+  padding: 0;
+  margin-left: 0;
+  
+}
+
+.logos{
+  height: 200px;
+  width: 300px;
+}
+.AddTo{
+  color: blueviolet;
+ 
+}
+.AddTo:hover{
+  background-color: greenyellow;
+}

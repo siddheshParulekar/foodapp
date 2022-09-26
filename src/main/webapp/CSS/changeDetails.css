@@ -1,0 +1,90 @@
+@charset "ISO-8859-1";
+body {background-color: white}
+nav{
+    background-color: #44818d  ;
+    
+  }
+#topnav{
+    position: fixed; /* sticky : scrolles till it reaches to given position and then bcm fixed*/
+     top: 0px;
+     width: 100%; 
+     margin: auto;
+  }
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+     text-align: center;
+     
+    
+ }
+nav li{
+     margin: 10px;
+     display:inline-block;
+
+    
+ }
+nav ul li a{
+     text-decoration: none;
+     color: white;
+     width: 100px;
+     display: block;
+     padding: 25px 20px;
+     font-size: 15px;
+     text-transform: uppercase;
+     font-weight: bold;
+
+ }
+
+nav a:hover{
+    background: greenyellow;
+
+ }
+ 
+/* .hero{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../Media/Login_back.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+} */
+.form{
+    width: 360px;
+    height: 480px;
+    position: relative;
+    margin: 10% auto;
+    background: white;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.input-group{
+    top: 120px;
+    position: absolute;
+    width: 200px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 95%;
+    height: 35px;
+    padding: 20px 50 px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right,#cc2b5e,#753a88);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}

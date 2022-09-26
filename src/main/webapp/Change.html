@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeDtails</title>
+    <link rel="stylesheet" href="CSS//changeDetails.css">
+</head>
+<body >
+
+   <div>
+      <nav id="topnav">
+         <ul >
+            <li><a href="Change.html">Change Password</a></li>
+            <li> <a href="ChangeContact.html">Change Contact</a> </li>
+            <li> <a href="changeEmail.html"> Change Email</a></li>
+             <li><a href="index.jsp">Home</a></li>
+         </ul>
+       </nav>
+   </div>
+   
+   <div class="hero">
+        <div class="form">
+                 <form action="UserServlet" method="post">
+                  <label>User Name:</label><input type="text" name="username" id="uname" required><br><br>
+                  <label>old Password:</label><input type="text" name="oldpass" id="password" required><br><br>
+                  <label>new Password:</label><input type="text" name="newpass" id="password" required><br><br>
+                  <input type="submit" value="change password"> <input type="reset">  
+                  <input type="hidden" name="act" value="changePasswordAction"> 
+               </form> 
+        </div>
+        
+    </div>
+   
+   
+   </body>
+   </html>
+   

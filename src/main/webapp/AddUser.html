@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="form">
+                 <form id="regeister" class="input-group" action="UserServlet" method="post">
+                <input type="text" name="uname" id="uname2" minlength="3" maxlength="10"   class="input-field" placeholder="user id " required>
+                 <input type="text" name="name" class="input-field" placeholder=" Enter name "  id="name"   required>
+                <input type="email" name="mail" class="input-field" placeholder="Email id "  id="mail"    required>
+                <input type="text" name="pass" class="input-field" placeholder=" Enter password "  id="pass2"   required>
+               <input type="text" id="phone" name="contact"  placeholder="Contact Number ">   
+                <button type="submit" class="submit-btn"   > Register</button>
+                <input type="hidden" name="act" value="registerAction"> 
+            </form>
+        </div>
+
+</body>
+</html>
